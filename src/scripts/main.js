@@ -1,9 +1,9 @@
 AOS.init();
 
-const dataDoEvento = new Data ("Dec 12, 2022 19:00:00");
+const dataDoEvento = new Date("Dec 12, 2022 19:00:00");
 const timeStampDoEvento = dataDoEvento.getTime();
 
-const contaAsHoras = setInterval(function () {
+const contaAsHoras = setInterval(function() {
     const agora = new Date();
     const timeStampAtual = agora.getTime();
 
@@ -13,10 +13,10 @@ const contaAsHoras = setInterval(function () {
     const horaEmMs = 1000 * 60 * 60;
     const minutoEmMs = 1000 * 60;
 
-    const diasAteOEvento = Math.floor(distanciaAteOvento / diaEmMs);
-    const horasAteOEvento = Math.floor((distanciaAteOvento % diaEmMs) / horaEmMs);
-    const minutosAteOEvento = Math.floor((distanciaAteOvento % horaEmMs) / minutosEmMs);
-    const segundosAteOEvento = Math.floor((distanciaAteOvento % minutoEmMs) / 1000);
+    const diasAteOEvento = Math.floor(distanciaAteOEvento / diaEmMs);
+    const horasAteOEvento = Math.floor((distanciaAteOEvento % diaEmMs) / horaEmMs);
+    const minutosAteOEvento = Math.floor((distanciaAteOEvento % horaEmMs) / minutoEmMs);
+    const segundosAteOEvento = Math.floor((distanciaAteOEvento % minutoEmMs) / 1000);
 
     console.log(diasAteOEvento);
     console.log(horasAteOEvento);
